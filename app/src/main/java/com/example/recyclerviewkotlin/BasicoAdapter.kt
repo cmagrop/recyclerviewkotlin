@@ -69,6 +69,6 @@ class BasicoAdapter: RecyclerView.Adapter<BasicoAdapter.ViewHolder> {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.asignarDatos(listaDatos.get(position))
     }
 }
