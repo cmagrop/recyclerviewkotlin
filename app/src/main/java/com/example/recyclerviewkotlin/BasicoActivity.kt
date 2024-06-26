@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
+
 class BasicoActivity : AppCompatActivity() {
     //atributos
     lateinit var listaDatos:ArrayList<String>
@@ -20,18 +21,18 @@ class BasicoActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_basico)
         //aqui empieza la acción
+        listaDatos = ArrayList<String>()
         //llenar listados
         listaDatos.add("Hola")
         listaDatos.add("mundo")
         listaDatos.add("feliz")
-        recycler = findViewById(R.id.recyclerId)
+        //iniciar el recycler
+        recycler = findViewById(R.id.recyclerId) //buscando el id en activivity_basico.xml
+        //establecer el adaptador -> recyclerview
         recycler.adapter = BasicoAdapter(listaDatos)
         //recycler.setLayoutManager
         recycler.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,
             false)
-
-
-
 
 
         }

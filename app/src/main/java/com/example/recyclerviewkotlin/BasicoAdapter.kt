@@ -1,5 +1,6 @@
 package com.example.recyclerviewkotlin
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,12 +36,19 @@ class BasicoAdapter: RecyclerView.Adapter<BasicoAdapter.ViewHolder> {
 
         //TextView item;
         lateinit var item: TextView
-
+        lateinit var intent: Intent
         init {
 
             //item=itemView.findViewById(R.id.itemId);
 
             item = itemView.findViewById(R.id.itemId)
+            /*
+            item.setOnClickListener {
+                intent = Intent(itemView.context,DetalleActivity::class.java)
+                itemView.context.startActivity(intent)
+
+            }
+              */
 
         }
 
