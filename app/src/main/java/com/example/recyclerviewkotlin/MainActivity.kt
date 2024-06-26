@@ -21,6 +21,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentBasico)
 
         }
+        var buttonComplejo:Button = findViewById(R.id.accesocomplejo)
+        buttonComplejo.setOnClickListener {
+            val intentComplejo = Intent(this,ComplejoActivity::class.java)
+            startActivity(intentComplejo)
+        }
+
+
 
     }
 }
